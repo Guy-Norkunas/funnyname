@@ -33,6 +33,9 @@ export default class Nav extends React.Component {
                     <Navbar.Item renderAs="div" href="#">
                         <Link to="/listings">Listings</Link>
                     </Navbar.Item>
+                    <Navbar.Item renderAs="div" href="#">
+                        <Link to="/create">Create Listing</Link>
+                    </Navbar.Item>
                 </Navbar.Container>
                 <Navbar.Container position="end">
                     <Navbar.Item href="#">
