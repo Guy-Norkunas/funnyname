@@ -21,13 +21,13 @@ export default class Listings extends React.Component {
                 latitude={listing.latitude}
                 longitude={listing.longitude}
                 room_type={listing.room_type}
-                price={listing.price}
+                price={listing.price}il
                 minimum_nights={listing.minimum_nights}
                 />
         })
 
         return(
-            <div class="container">
+            <div className="grid-container">
                 {listingsArr}    
             </div>
             )
