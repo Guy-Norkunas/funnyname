@@ -4,11 +4,11 @@ import { Card, Media, Content, Heading } from 'react-bulma-components';
 
 export default class Listing extends React.Component {
 
-    deleteListing = async (this.props.id) => {
-        await fetch(`http://localhost:3000/listings/${this.props.id}`, {
-          method: "DELETE"
-        })
-    }
+    // deleteListing = async (this.props.id) => {
+    //     await fetch(`http://localhost:3000/listings/${this.props.id}`, {
+    //       method: "DELETE"
+    //     })
+    // }
 
     
     render() {
