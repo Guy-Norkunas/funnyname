@@ -2,8 +2,8 @@ import React from 'react';
 
 
 export default class Search extends React.Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.search = "nothing"
 
     }
@@ -36,7 +36,8 @@ export default class Search extends React.Component {
 
 
     sortListingsPrice = () => {
-        if (this.search == "price"){
+        this.setState({listings: this.props.listings.sort(this.compareReverse)})
+        if (this.search === "price"){
             this.props.updateListings(this.props.listings.sort(this.compareReverse))
             this.search = "priceReverse"
         }
@@ -47,7 +48,7 @@ export default class Search extends React.Component {
     }
 
     sortListingsLength = () => {
-        if (this.search == "minimum_nights"){
+        if (this.search === "minimum_nights"){
             this.props.updateListings(this.props.listings.sort(this.compareReverse))
             this.search = "minimum_nightsReverse"
         }
@@ -58,7 +59,7 @@ export default class Search extends React.Component {
     }
 
     sortListingsDate = () => {
-        if (this.search == "created_at"){
+        if (this.search === "created_at"){
             this.props.updateListings(this.props.listings.sort(this.compareReverse))
             this.search = "created_atReverse"
         }
@@ -69,6 +70,7 @@ export default class Search extends React.Component {
     }
 
     render() {
+
         return(
             <>
                 Currently sorting by: {this.search}
