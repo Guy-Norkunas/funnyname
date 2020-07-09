@@ -4,7 +4,7 @@ import React from 'react';
 export default class Search extends React.Component {
     constructor(){
         super()
-        this.variable = "none"
+        this.search = "nothing"
 
     }
 
@@ -71,6 +71,7 @@ export default class Search extends React.Component {
     render() {
         return(
             <>
+                Currently sorting by: {this.search}
                 <input type="button" value="Price"  onClick={this.sortListingsPrice} />
                 <input type="button" value="Length" onClick={this.sortListingsLength} />
                 <input type="button" value="New/Old" onClick={this.sortListingsDate} />
