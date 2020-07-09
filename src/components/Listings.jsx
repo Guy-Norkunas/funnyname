@@ -18,7 +18,7 @@ export default class Listings extends React.Component {
     }
 
     render() {
-        const listingsArr = this.state.listings.map((listing, index) => {
+        const listingsArr = this.state?.listings.map((listing, index) => {
             return <Card
                 key={index} 
                 id={listing.id} 
@@ -34,9 +34,14 @@ export default class Listings extends React.Component {
         })
 
         return(
-            <div className="grid-container">
-                {listingsArr}    
-            </div>
+            <>
+                <div>
+                    <Search updateListings={this.updateListings} listings={this.state?.listings} />
+                </div>
+                <div className="grid-container">
+                    {listingsArr}    
+                </div>
+            </>
             )
         }
     }
