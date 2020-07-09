@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Switch } from "react-router-dom";
-import Home from './home';
-import Listings from './listings';
-import Listing from './listing';
+import Home from './Home';
+import Listings from './Listings';
+import Listing from './Listing';
 import Navbar from '../shared/navbar'
 
 export default class App extends React.Component {
