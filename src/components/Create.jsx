@@ -23,7 +23,9 @@ export default class Create extends React.Component {
 
     render() {
         return(
-            <Form onFormSubmit={this.onFormSubmit} onInputChange={this.onInputChange} />
+            <div className="container">
+                <Form onFormSubmit={this.onFormSubmit} onInputChange={this.onInputChange} />
+            </div>
         )
     }
 }
