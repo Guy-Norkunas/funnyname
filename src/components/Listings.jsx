@@ -19,7 +19,8 @@ export default class Listings extends React.Component {
 
     render() {
         const listingsArr = this.state?.listings.map((listing, index) => {
-            return <Card
+            return( 
+                <Card
                 key={index} 
                 id={listing.id} 
                 name={listing.name}
@@ -30,7 +31,7 @@ export default class Listings extends React.Component {
                 price={listing.price}il
                 minimum_nights={listing.minimum_nights}
                 show='true'
-                />
+                />)
         })
 
         return(

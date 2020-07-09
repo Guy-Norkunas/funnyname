@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { Card, Media, Content, Heading } from 'react-bulma-components';
 
-export default class Listing extends React.Component {
+export default class ListingCard extends React.Component {
 
     // deleteListing = async (this.props.id) => {
     //     await fetch(`http://localhost:3000/listings/${this.props.id}`, {
