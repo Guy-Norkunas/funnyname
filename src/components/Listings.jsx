@@ -1,19 +1,24 @@
 import React from 'react';
-import Listing from './Listing'
+import Listing from './Listing';
+import Search from './Search';
 
 export default class Listings extends React.Component {
 
     componentDidMount() {
-        fetch(`http://fast-peak-00857.herokuapp.com/listings`)
+        fetch(`https://fast-peak-00857.herokuapp.com/listings`)
         .then(response => response.json())
         .then(data => this.setState({listings: data}))
         .catch((err) => console.log(err));
         console.log('here')
     }
 
+    updateListings = (data) => {
+        this.setState({listings: data});
+    }
+
     render() {
         const listingsArr = this.state?.listings.map((listing, index) => {
-            return <Listing
+            return (<Listing
                 key={index} 
                 id={listing.id} 
                 name={listing.name}
@@ -23,13 +28,18 @@ export default class Listings extends React.Component {
                 room_type={listing.room_type}
                 price={listing.price}il
                 minimum_nights={listing.minimum_nights}
-                />
+                />)
         })
 
         return(
-            <div className="grid-container">
-                {listingsArr}    
-            </div>
+            <>
+                <div>
+                    <Search updateListings={this.updateListings} listings={this.state?.listings}/>
+                </div>
+                <div className="grid-container">
+                    {listingsArr}    
+                </div>
+            </>
             )
     }
 }
