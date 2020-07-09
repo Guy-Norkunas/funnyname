@@ -13,9 +13,23 @@ export default class Listings extends React.Component {
 
     render() {
         const listingsArr = this.state.listings.map((listing, index) => {
-            return <Listing key={index} id={listing.id} name={listing.name} />
+            return <Listing
+                key={index} 
+                id={listing.id} 
+                name={listing.name}
+                neighbourhood={listing.neighbourhood}
+                latitude={listing.latitude}
+                longitude={listing.longitude}
+                room_type={listing.room_type}
+                price={listing.price}
+                minimum_nights={listing.minimum_nights}
+                />
         })
 
-        return(listingsArr)
+        return(
+            <div class="container">
+                {listingsArr}    
+            </div>
+            )
     }
 }

@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Home from './Home';
 import Listings from './Listings';
 import Listing from './Listing';
-import Navbar from '../shared/navbar'
+import Navbar from '../shared/Navbar'
 
 export default class App extends React.Component {
     render() {
@@ -12,7 +12,7 @@ export default class App extends React.Component {
                 <Navbar />
                 <Switch>
                     <Route exact path="/listing/:id" component={Listing} />
-                    <Route exact path="/listing" component={Listings} />
+                    <Route exact path="/listings" component={Listings} />
                     <Route exact path="/" component={Home} />
                 </Switch>
             </>
