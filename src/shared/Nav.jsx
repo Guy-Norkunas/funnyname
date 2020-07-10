@@ -36,7 +36,7 @@ export default class Nav extends React.Component {
                 </Navbar.Container>
                 <Navbar.Container position="end">
                     <Navbar.Item href="#">
-                        At the end
+                        AirBnB
                     </Navbar.Item>
                 </Navbar.Container>
                 </Navbar.Menu>
