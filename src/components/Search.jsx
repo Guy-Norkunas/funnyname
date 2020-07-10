@@ -72,12 +72,14 @@ export default class Search extends React.Component {
     render() {
 
         return(
-            <>
-                Currently sorting by: {this.search}
-                <input type="button" value="Price"  onClick={this.sortListingsPrice} />
-                <input type="button" value="Length" onClick={this.sortListingsLength} />
-                <input type="button" value="New/Old" onClick={this.sortListingsDate} />
-            </>
+            <div className="box" id="search-box">
+                <p>Currently sorting by: <strong>{this.search}</strong></p>
+                <div className="button-box">
+                    <input className="button" type="button" value="Price"  onClick={this.sortListingsPrice} />
+                    <input className="button" type="button" value="Length" onClick={this.sortListingsLength} />
+                    <input className="button" type="button" value="New/Old" onClick={this.sortListingsDate} />
+                </div>
+            </div>
         )
     }
 }
