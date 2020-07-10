@@ -24,6 +24,7 @@ export default class Listing extends React.Component {
                     room_type={listing.room_type}
                     price={listing.price}il
                     minimum_nights={listing.minimum_nights}
+                    listing={listing.photo}
                 />
             </div>
         )
