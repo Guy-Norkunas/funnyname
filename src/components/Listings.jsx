@@ -3,8 +3,6 @@ import Card from './Card'
 import Search from './Search';
 
 export default class Listings extends React.Component {
-    state = { listings: [] }
-
     componentDidMount() {
         fetch(`https://fast-peak-00857.herokuapp.com/listings`)
         .then(response => response.json())
@@ -31,6 +29,8 @@ export default class Listings extends React.Component {
                 price={listing.price}il
                 minimum_nights={listing.minimum_nights}
                 show='true'
+                updateListings={this.updateListings}
+                listings={this.state?.listings}
                 />)
         })
 
