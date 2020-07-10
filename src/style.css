@@ -1,4 +1,4 @@
-.container {
+.general-container {
     padding-top: 20px;
     width: 100%;
     display: flex;
@@ -31,4 +31,14 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+}
+
+a, 
+.form-button {
+    color: hsl(348, 100%, 61%);
 }
