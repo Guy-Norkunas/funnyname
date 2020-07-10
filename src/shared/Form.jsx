@@ -47,10 +47,10 @@ export default class Form extends React.Component {
 
                 <div class="field is-grouped">
                 <div class="control">
-                    <button class="button is-link" type="submit">Submit</button>
+                    <button className="button is-danger is-link" type="submit">Submit</button>
                 </div>
                 <div class="control">
-                    <button class="button is-link is-light">Cancel</button>
+                    <button className="button form-button">Cancel</button>
                 </div>
                 </div>
 

@@ -21,7 +21,7 @@ export default class ListingCard extends React.Component {
     render() {
         if(this.state?.deleted !== "true"){
             return(
-                <div className="container">
+                <div className="general-container">
                     <div className="card-container">
                         <Card>
                             <Card.Image size="4by3" src="https://source.unsplash.com/400x300/?house" />

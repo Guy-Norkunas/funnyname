@@ -30,7 +30,7 @@ export default class Edit extends React.Component {
     
     render() {
         return(
-            <div className="container">
+            <div className="general-container">
                 <Form listing={this.state.listing} onFormSubmit={this.onFormSubmit} onInputChange={this.onInputChange}/>
             </div>
         )

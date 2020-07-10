@@ -23,7 +23,7 @@ export default class Create extends React.Component {
 
     render() {
         return(
-            <div className="container">
+            <div className="general-container">
                 <Form onFormSubmit={this.onFormSubmit} onInputChange={this.onInputChange} />
             </div>
         )
