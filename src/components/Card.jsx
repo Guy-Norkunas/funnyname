@@ -24,7 +24,7 @@ export default class ListingCard extends React.Component {
                 <div className="general-container">
                     <div className="card-container">
                         <Card>
-                            <Card.Image size="4by3" src={this.props.photo} />
+                            <Card.Image size="4by3" src={this.props.photo_url} />
                             <Card.Content>
                             <Media>
                                 <Media.Item>
