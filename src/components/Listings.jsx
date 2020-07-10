@@ -8,7 +8,6 @@ export default class Listings extends React.Component {
         .then(response => response.json())
         .then(data => this.setState({listings: data}))
         .catch((err) => console.log(err));
-        console.log('here')
     }
 
     updateListings = (data) => {
