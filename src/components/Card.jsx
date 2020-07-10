@@ -4,11 +4,12 @@ import { Card, Media, Content, Heading } from 'react-bulma-components';
 
 export default class ListingCard extends React.Component {
 
-    // deleteListing = async (this.props.id) => {
-    //     await fetch(`http://localhost:3000/listings/${this.props.id}`, {
-    //       method: "DELETE"
-    //     })
-    // }
+    deleteListing = async (id) => {
+        await fetch(`http://localhost:3000/listings/${id}`, {
+          method: "DELETE"
+        })
+        // this.props.history.push("/listings")
+    }
 
     
     render() {
@@ -32,8 +33,10 @@ export default class ListingCard extends React.Component {
                             {this.props.show && <Card.Footer.Item renderAs="div" href="#Yes">
                                 <Link to={`/listing/${this.props.id}`}>Show</Link>
                             </Card.Footer.Item>}
-                            <Card.Footer.Item renderAs="a" href="#No">Edit</Card.Footer.Item>
-                            <Card.Footer.Item renderAs="a" href="#Maybe" onClick={this.deleteListing}>Delete</Card.Footer.Item>
+                            <Card.Footer.Item renderAs="div" href="#Yes">
+                                <Link to={`/edit/${this.props.id}`}>Edit</Link>
+                            </Card.Footer.Item>
+                            <Card.Footer.Item renderAs="a" href="#Maybe" onClick={this.deleteListing(this.props.id)}>Delete</Card.Footer.Item>
                         </Card.Footer>
                     </Card>
                 </div>

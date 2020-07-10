@@ -2,9 +2,11 @@ import React from 'react';
 import Card from './Card'
 
 export default class Listing extends React.Component {
+    state = {listing: {}}
+
     componentDidMount() {
         console.log('here')
-        fetch(`http://localhost:3000/listings/11419589`)
+        fetch(`https://fast-peak-00857.herokuapp.com/listings/${this.props.match.params.id}`)
         .then(response => response.json())
         .then(data => this.setState({listing: data}))
     }
